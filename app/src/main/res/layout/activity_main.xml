@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/title"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_remittance_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:gravity="right"
+        android:text="@string/remittance_state"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+    <TextView
+        android:id="@+id/text_receiving_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/receiving_country"
+        app:layout_constraintEnd_toEndOf="@id/text_remittance_state"
+        app:layout_constraintTop_toBottomOf="@id/text_remittance_state" />
+
+    <TextView
+        android:id="@+id/text_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/exchange_rate"
+        app:layout_constraintEnd_toEndOf="@id/text_remittance_state"
+        app:layout_constraintTop_toBottomOf="@id/text_receiving_country" />
+
+    <TextView
+        android:id="@+id/text_check_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/check_time"
+        app:layout_constraintEnd_toEndOf="@id/text_remittance_state"
+        app:layout_constraintTop_toBottomOf="@id/text_exchange_rate" />
+
+    <TextView
+        android:id="@+id/text_remittance_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/remittance_amount"
+        app:layout_constraintEnd_toEndOf="@id/text_remittance_state"
+        app:layout_constraintTop_toBottomOf="@id/text_check_time" />
+
+    <TextView
+        android:id="@+id/text_received_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/received_amount"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_remittance_amount" />
+
+    <TextView
+        android:id="@+id/text_remittance_state2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/us"
+        app:layout_constraintStart_toEndOf="@+id/text_remittance_state"
+        app:layout_constraintTop_toTopOf="@+id/text_remittance_state" />
+
+    <TextView
+        android:id="@+id/text_receiving_country2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/text_receiving_country"
+        app:layout_constraintTop_toTopOf="@+id/text_receiving_country"
+        tools:text="한국(KRW)" />
+
+    <TextView
+        android:id="@+id/text_exchange_rate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/text_exchange_rate"
+        app:layout_constraintTop_toTopOf="@+id/text_exchange_rate"
+        tools:text="@string/exchange_rate_now" />
+
+    <TextView
+        android:id="@+id/text_check_time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/text_check_time"
+        app:layout_constraintTop_toTopOf="@+id/text_check_time"
+        tools:text="2020-04-17 16:13" />
+
+    <EditText
+        android:id="@+id/edit_amount"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="right"
+        android:inputType="number"
+        android:paddingRight="4dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_remittance_amount"
+        app:layout_constraintStart_toEndOf="@+id/text_remittance_amount"
+        app:layout_constraintTop_toTopOf="@+id/text_remittance_amount"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/text_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/usd"
+        app:layout_constraintStart_toEndOf="@+id/edit_amount"
+        app:layout_constraintTop_toTopOf="@+id/edit_amount" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:clipToPadding="false"
+        android:paddingTop="100dp"
+        android:paddingBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

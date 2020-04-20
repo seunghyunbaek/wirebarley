@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Wirebarley</string>
+    
+    <string name="title">환율 계산</string>
+    <string name="remittance_state">송금국가 : </string>
+    <string name="receiving_country">수취국가 : </string>
+    <string name="exchange_rate">환율 : </string>
+    <string name="check_time">조회시간 :</string>
+    <string name="remittance_amount">송금액 : </string>
+    <string name="us">미국(USD)</string>
+    <string name="usd">USD</string>
+
+<!--    <string name="title">타이틀</string>-->
+<!--    <string name="remittance_state">Text1 : </string>-->
+<!--    <string name="receiving_country">Text2 : </string>-->
+<!--    <string name="exchange_rate">Text3 : </string>-->
+<!--    <string name="check_time">Text4 :</string>-->
+<!--    <string name="remittance_amount">Text4 : </string>-->
+<!--    <string name="us">A</string>-->
+<!--    <string name="usd"> </string>-->
+
+    <string name="exchange_rate_now">%1$d %2$s / USD</string>
+    <string name="received_amount">수취금액은 %1$d %2$s 입니다</string>
+
+
+<!--    <string name="exchange_rate_now"> </string>-->
+<!--    <string name="received_amount"> </string>-->
+
+</resources>
